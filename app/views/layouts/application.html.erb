@@ -3,12 +3,27 @@
 <head>
   <title>Workspace</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'blog', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<div class="blog-masthead">
+  <div class="container">
+    <nav class="blog-nav">
+      <%= link_to "Home", root_path, class: 'blog-nav-item' %>
+      <%= link_to "Temp", welcome_index_path, class: 'blog-nav-item' %>
+      <%= link_to "Temp2", welcome_index_path, class: 'blog-nav-item' %>
+    </nav>
+  </div>
+</div>
+
 <%= yield %>
 
+<!--Blog footer-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
 </body>
 </html>
